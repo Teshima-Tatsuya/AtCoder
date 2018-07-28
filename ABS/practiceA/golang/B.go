@@ -14,7 +14,7 @@ func main() {
 
 	fmt.Scan(&N, &Q)
 	fmt.Fprintln("%d %d", N, Q)
-	
+
 	fmt.Fprintln(writer, "? A B")
 	_ = writer.Flush()
 
