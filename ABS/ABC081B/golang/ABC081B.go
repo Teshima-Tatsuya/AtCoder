@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"math"
 	"os"
 	"strconv"
 )
@@ -11,27 +10,28 @@ import (
 var sc = bufio.NewScanner(os.Stdin)
 
 func main() {
+	sc.Split(bufio.ScanWords)
 	N := nextInt()
-
-	a := []int{}
+	nums := []int{}
 	for i := 0; i < N; i++ {
-		a = append(a, nextInt())
+		nums = append(nums, nextInt())
 	}
 
 	flag := true
 	result := 0
 	for i := 1; ; i++ {
-		for _, num := range a {
-			if num%int(math.Pow(float64(2), float64(i))) != 0 {
+		for j, num := range nums {
+			if num%2 == 0 {
+				nums[j] = num / 2
+			} else {
 				flag = false
-				break
 			}
 		}
-		if flag {
-			result++
-		} else {
+		if !flag {
 			break
 		}
+
+		result++
 	}
 
 	fmt.Println(result)
@@ -39,10 +39,7 @@ func main() {
 
 func nextInt() int {
 	sc.Scan()
-	i, e := strconv.Atoi(sc.Text())
-	if e != nil {
-		panic(e)
-	}
+	i, _ := strconv.Atoi(sc.Text())
 
 	return i
 }
