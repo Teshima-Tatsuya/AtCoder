@@ -1,5 +1,6 @@
 import numpy as np
 from operator import add
+import itertools
 from functools import reduce
 
 
