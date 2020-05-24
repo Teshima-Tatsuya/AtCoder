@@ -1,4 +1,4 @@
-## 途中
+# 途中
 A1 = list(map(int, input().split()))
 A2 = list(map(int, input().split()))
 A3 = list(map(int, input().split()))
@@ -12,7 +12,8 @@ for i in range(N):
     if inp in A:
         index.append(A.index(inp))
 
-if (0 in index and 3 in index and 6 in index) or \
+if \
+   (0 in index and 3 in index and 6 in index) or \
    (1 in index and 4 in index and 7 in index) or \
    (2 in index and 5 in index and 8 in index) or \
    (0 in index and 4 in index and 8 in index) or \
