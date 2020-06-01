@@ -1,0 +1,19 @@
+{
+  "AtCoder": {
+    "scope": "python",
+    "prefix": "ac",
+    "body": [
+      "def li():",
+      "\treturn list(map(int, input().split()))",
+      "def mi():",
+      "\treturn map(int, input().split())",
+      "def ii():",
+      "\treturn int(input())",
+      "def lim(N):",
+      "\treturn [int(input()) for i in range(N)]",
+      "",
+      "$1"
+    ],
+    "description": "test"
+  }
+}
