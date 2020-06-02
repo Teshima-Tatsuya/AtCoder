@@ -22,11 +22,16 @@ primes = prime_factorize(N)
 num = 0
 hist = [1]
 c = 1
+
+tmp = 1
 for p in primes:
+    # 前回と異なる場合
+    if tmp != p:
+        c = 1
+    tmp = p
     c *= p
     if c not in hist:
         hist.append(c)
         num += 1
         c = 1
-
 print(num)
