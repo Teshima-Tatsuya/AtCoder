@@ -1,0 +1,36 @@
+{
+	"yesno": {
+        "prefix": "yn",
+        "body": [
+            "fn yesno(b: bool) -> &'static str {",
+            "    if b { \"Yes\" } else { \"No\" }",
+            "}",
+        ],
+        "description": ""
+    },
+    "readi": {
+        "prefix": "readi",
+        "body": [
+            "fn readi() -> i32 {",
+            "    let stdin = std::io::read_to_string(std::io::stdin()).unwrap();",
+            "    let mut stdin = stdin.split_whitespace();",
+            "    stdin.next().unwrap().parse().unwrap()",
+            "}",
+        ],
+        "description": ""
+    },
+    "readi_l": {
+        "prefix": "readi_l",
+        "body": [
+            "fn readi_l() -> Vec<i32> {",
+            "    let stdin = std::io::read_to_string(std::io::stdin()).unwrap();",
+            "    stdin.split_whitespace()",
+            "        .map(|s| s.parse().unwrap())",
+            "        .collect::<Vec<i32>>()",
+            "}",
+        ],
+        "description": ""
+    },
+
+
+}
