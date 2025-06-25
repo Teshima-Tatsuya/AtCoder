@@ -1,0 +1,10 @@
+[package]
+name = "B51"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bin]]
+name = "B51"
+path = "main.rs"
